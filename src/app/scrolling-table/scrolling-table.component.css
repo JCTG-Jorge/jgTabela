@@ -1,7 +1,7 @@
 /*@import "bootstrap/dist/css/bootstrap.css";*/
 
 .scrolling-table {
-  max-height: 310px ;  /* Altura máxima da tabela */
+  max-height: 400px ;  /* Altura máxima da tabela */
   overflow-y: auto; /* Adiciona rolagem vertical */
 
 
