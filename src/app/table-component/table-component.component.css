@@ -1,0 +1,6 @@
+.po-table {
+  max-height: 500px; /* Altura máxima da tabela */
+  overflow-y: auto !important; /* Adiciona rolagem vertical */
+
+
+}

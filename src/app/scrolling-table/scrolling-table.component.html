@@ -1,0 +1,58 @@
+<div class="table-container scrolling-table " #tableContainer>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Código</th>
+        <th>Descrição</th>
+        <th>Estado</th>
+        <th>Cidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="items.length > 0; else noItems">
+        <tr *ngFor="let item of items; let i = index; let odd = odd; let even = even;"
+            [class.odd]="odd" [class.even]="even" [class.active]="i === currentIndex">
+
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.state }}</td>
+          <td>{{ item.cityName }}</td>
+
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+
+<div class="po-row po-p-2">
+  <po-button
+  class="po-md-2"
+  p-label="Scroll Initial"
+     (p-click)="onClickButton()">
+</po-button>
+<po-button
+class="po-md-2"
+p-label="Scroll Stop"
+   (p-click)="onClickButtonFim()">
+</po-button>
+  <input class="po-md-2" type="range" min="0" max="10" [(ngModel)]="velocidade" (input)="updateValor()" />
+  <span  class="po-p-1">{{ velocidade }}</span>
+
+
+  <po-input
+      class="po-md-2"
+      name="ola"
+      [(ngModel)]="velocidade"
+      p-label="Teste"
+      >
+  </po-input>
+
+</div>
+
+
+
+<ng-template #noItems>
+  <p>Nenhum item disponível</p>
+</ng-template>
+
+

@@ -1,0 +1,75 @@
+/*@import "bootstrap/dist/css/bootstrap.css";*/
+
+.scrolling-table {
+  max-height: 310px ;  /* Altura máxima da tabela */
+  overflow-y: auto; /* Adiciona rolagem vertical */
+
+
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+  color: #045b8f;
+  font-size: 24px;
+
+
+}
+table, th, td {
+  border: 1px solid;
+}
+
+.active {
+  background-color: #f0f0f0; /* Estilo para a linha ativa */
+}
+
+.odd {
+  background-color: #ffffff; /* Estilo para linhas ímpares */
+}
+
+.even {
+  background-color: #eae2e2; /* Estilo para linhas pares */
+}
+
+
+/* Estilos CSS para o menu suspenso */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
