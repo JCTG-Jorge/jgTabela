@@ -1,4 +1,4 @@
-<div class="table-container scrolling-table " #tableContainer>
+<div class="table-container scrolling-table" #tableContainer>
   <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -23,36 +23,23 @@
     </tbody>
   </table>
 </div>
-
 <div class="po-row po-p-2">
   <po-button
+    class="po-md-2"
+    p-label="Scroll Initial"
+    (p-click)="onClickButton()">
+  </po-button>
+  <po-button
   class="po-md-2"
-  p-label="Scroll Initial"
-     (p-click)="onClickButton()">
-</po-button>
-<po-button
-class="po-md-2"
-p-label="Scroll Stop"
-   (p-click)="onClickButtonFim()">
-</po-button>
+  p-label="Scroll Stop"
+    (p-click)="onClickButtonFim()">
+  </po-button>
+
   <input class="po-md-2" type="range" min="0" max="10" [(ngModel)]="velocidade" (input)="updateValor()" />
   <span  class="po-p-1">{{ velocidade }}</span>
 
-
-  <po-input
-      class="po-md-2"
-      name="ola"
-      [(ngModel)]="velocidade"
-      p-label="Teste"
-      >
-  </po-input>
-
 </div>
-
-
 
 <ng-template #noItems>
   <p>Nenhum item disponível</p>
 </ng-template>
-
-
