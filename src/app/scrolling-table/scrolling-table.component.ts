@@ -19,11 +19,11 @@ export class ScrollingTableComponent  implements OnInit, OnDestroy {
   @Input() items: any[] = [];
   currentIndex = 0;
   scrollInterval: any;
-  velocidade = 0
+  velocidade = 1
 
   ngOnInit() {
 
-    //this.startAutoScroll();
+
 
   }
 
@@ -33,6 +33,7 @@ export class ScrollingTableComponent  implements OnInit, OnDestroy {
   }
 
   startAutoScroll(): void {
+    this.velocidade = 1
     this.interval = setInterval(() => {
       this.scrollTable();
     }, this.scrollSpeed);
@@ -48,14 +49,16 @@ export class ScrollingTableComponent  implements OnInit, OnDestroy {
     table.scrollTop += this.velocidade; // Velocidade da rolagem. Ajuste conforme necessário.
 
     // Verifique se chegou ao final da tabela e reinicie a rolagem
+
     if (table.scrollHeight - table.scrollTop === table.clientHeight) {
       table.scrollTop = 0;
+
     }
   }
 
 
   onClickButton(){
-    this.velocidade = 1
+
     this.startAutoScroll()
   }
   onClickButtonFim(){
